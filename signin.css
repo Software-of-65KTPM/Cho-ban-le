@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Outfit;
+}
+body{
+    background: white;
+    text-align: center;
+    font-family: Outfit;
+    min-height:100vh;
+}
+.logo{
+    margin-top:20px;
+}
+.signin-container{
+    max-width:350px;
+    border: 1px solid #d2d2d2;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px 26px;
+    border-radius: 8px;
+    text-align: left;
+}
+.signin-title{
+    font-size: 28px;
+    font-weight:400;
+}
+
+.input-lable{
+    margin-top: 20px;
+}
+.signin-container input{
+    width: 100%;
+    height: 32px;
+    margin-top: 5px;
+    padding: 3px 7px;
+    border-radius: 3px;
+    border: 1px solid #a0a0a0;
+    font-size: 12px;
+}
+.signin-container input:focus{
+    outline: 3px solid green;
+}
+.signin-container button{
+    width:100%;
+    height: 32px;
+    margin:15px 0;
+    background: #ffd814;
+    border:none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.signin-container button:hover{
+    background: #f7f7f7;
+}
+.signin-condition{
+    font-size: 12px;
+}
