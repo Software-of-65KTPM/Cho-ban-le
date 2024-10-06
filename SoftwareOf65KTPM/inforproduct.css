@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+button{
+    width: 30%;
+    height: 32px;
+    margin:15px 0;
+    background: #ffd814;
+    border:none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
