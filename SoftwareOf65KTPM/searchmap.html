@@ -1,0 +1,101 @@
+<html>
+<head>
+  <title>Tìm kiếm cửa hàng trên bản đồ</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav >
+        <a href="/">
+            <img class="nav-market-icon" src="./assets/1x/logomarket.png" width="70" alt="Market Of Future">
+        </a>
+        <div class="nav-address">
+            
+            <div>
+                <p>Vận chuyển</p>
+                <h1>Hà Nội</h1>
+            </div>
+        </div>
+        <div class="nav-search">
+            <div class="nav-search-gategory">
+                <p>All</p>
+                <img src="./assets/1x/dropdown_icon.png" height="10" alt="">
+            </div>
+            <div class="nav-search">
+            <input type="text" class="nav-search-input" id="input-box" placeholder="Tìm kiếm ">
+            
+            <img src="./assets/1x/Asset 3.png" alt="" class="nav-search-icon">
+        
+            </div>
+        </div>
+        <div class="nav-language">
+            <img src="./assets/icon_language.jpg" width="25px" alt="">
+            <p>VIE</p>
+            <img src="./assets/1x/dropdown_logo.png" width="13px" alt="">
+        </div>
+        <div class="nav-text">
+            <p>Hello,Nguyễn</p>
+            <a href="signin.html">
+            <h1>Tài khoản & Chi tiết <img src="" alt="">
+            <img src="./assets/1x/dropdown_logo.png" width="8px" alt=""></h1></a>
+        </div>
+        <div class="nav-text">
+            <p>Hoàn lại</p>
+            <h1>& Đơn hàng</h1>
+        </div>
+        <a href="/cart.html" class="nav-cart">
+            <img src="/assets/1x/logomarket.png" width="35px" alt="">
+            <h4>Giỏ hàng</h4>
+        </a>
+    </nav>
+    <div class="nav-bottom">
+        <div>
+            <p>All</p>
+        </div>
+            <p>Hàng ngon giá rẻ</p>
+            <p>Chăm sóc khách hàng</p>
+            <p>Đăng kí</p>
+            <p>Thẻ quà tăng</p>
+            <p>Bán</p>
+            <a href="/purchased.html"><p>Lịch sử mua hàng</p></a>
+            <a href="/adsUer.html"><p>Quảng Cáo</p></a>
+            <a href=""><p>Ưu Đãi</p></a>
+    </div>
+    <div id="map"></div>
+    <script>
+        var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 21.028511, lng: 105.854167},
+        zoom: 12
+        });
+        var request = {
+        query: 'cửa hàng',
+        };
+
+        var service = new google.maps.places.PlacesService(map);
+        service.findPlaces(request, function(results, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+            var place = results[i];
+            var marker = new google.maps.Marker({
+                position: place.geometry.location,
+                map: map
+            });
+
+            var infoWindow = new google.maps.InfoWindow({
+                content: '<div><strong>' + place.name + '</strong><br>' +
+                place.formatted_address + '<br>' +
+                'Đánh giá: ' + place.rating + '<br>' +
+                'Số điện thoại: ' + place.phone_number + '<br>' +
+                '<a href="' + place.website + '">Trang web</a>' +
+                '</div>'
+            });
+
+            marker.addListener('click', function() {
+                infoWindow.open(map, marker);
+            });
+            }
+        }
+        });
+    </script>
+</body>
+</html>

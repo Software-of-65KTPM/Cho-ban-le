@@ -1,17 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 *{
+
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: Outfit;
 }
-
-body{
-    background-color: #dadada;
-}
 a{
+    color: #fff;
     text-decoration: none;
-    color: inherit;
 }
 nav{
     display: flex;
@@ -122,145 +119,84 @@ nav{
     color: #fff;
     font-size: 15px;
 }
+
 .nav-bottom div{
     display: flex;
     align-items: center;
     gap: 5px;
     font-weight: 500;
 }
-.header-slider ul{
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+.title{
     display: flex;
-    overflow-y: hidden ;
+    justify-content: center;
+    color: #ffd814;
+    font-size: larger;
+    background: #232f32;
 }
-.header-slider .control_next{
-    margin-top: 5%;
-}
-.header-slider .control_prev{
-    margin-top: 5%;
-}
-
-.header-img{
-    max-width: 100%;
-    mask-image: linear-gradient(to bottom, #000000 50%, transparent 100%);
-}
-.header-slider a {
-    position: absolute;
-    top: 20%;
-    z-index: 1;
-    padding: 5vh 1vw;
-    background: #ffffff4f;
-    color: #0000007b;
-    text-decoration: 600;
-    font-size: 18px;
-    cursor: pointer;
-}
-.control_next {
-    right: 0;
-
-}
-.box-row{
+.packages {
     display: flex;
-    flex-wrap: wrap;
-    row-gap: 20px;
     justify-content: space-between;
-    margin: 20px 30px;
+    color: white;
 }
-.box-col{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px 20px;
-    background: #fff;
-    max-width: 24%;
-    min-height: 200px;
-    z-index: 1;
-}
-.box-col a{
-    font-size: 13px;
-    color: #009999;
-    font-weight: 500;
-}
-.header-box{
-    margin-top: -20vw;
-}
-.products-slider{
-    background: #fff;
-    margin: 0 30px;
-    padding: 20px;
-    margin-bottom: 15px; 
-}
-.products-slider .products{
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    margin-top: 10px;
-}
-.products-slider .products img{
-    max-width: 200px;
-    max-height: 200px;
-}
-.products-slider .products::-webkit-scrollbar {
-    display: none;
-}
-.products-slider-with-price{
-    background: #fff;
-    margin: 0 30px;
-    padding: 20px;
-    margin-bottom: 15px;
-
-}
-.products-slider-with-price .products{
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.products-slider-with-price .products::-webkit-scrollbar{
-    display: none;
-}
-.product-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    min-width: 210px;
-    background: #fbfbfb;
-}
-.product-card img{
-    width: 110px;
-    margin: 0 50px;
-
-}
-.product-offer p{
-    background: #be0b3b;
-    color: #fff;
-    display: inline-block;
-    padding: 2px 5px;
-    border-radius: 2px;
-    margin: 8px 0;
-    font-size: 13px;
-}
-.product-offer span{
-    color: #be0b3b;
-    font-weight: 500;
-    font-size: 12px;
+h3, h4{
+    text-align: left;
 }
 .product-price{
-    color: gray;
-    font-size: 13px;
-
+    color: #ffd814;
+    font-size: 25px;
+    font-weight: bold;
+    
 }
-.product-card h4{
-    color: #525252;
+.package {
+    width: 400px;
+    border: 1px solid #ccc;
+    background: #232F3E;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px 8px 8px 8px;
+    margin-left: 15px ;
+    margin-right: 10px;
+    max-width: 500px;
+    
+}
+.ul-number{
+    list-style-type: circle;
+    padding: 10px;
+}
+ul {
+    list-style-type: none;
+    padding: 0; /* Loại bỏ khoảng cách thụt vào mặc định */
+    margin: 0; /* Loại bỏ khoảng cách mặc định */
+}
+button{
+    width:100%;
+    height: 32px;
+    margin: 15px 0;
+    background: #ffd814;
+    border:none;
+    border-radius: 8px;
+    cursor: pointer;
     font-size: 15px;
-    font-weight: 400;
-
+    display: block;
+}
+.highlight{
+    color: #00A8E1;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
 }
 footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #fff;
-    background: #131921;
+    background:  #232F3E;
     padding: 20px 60px;
 }
+/* Các style khác để tùy chỉnh giao diện */
